@@ -1,29 +1,33 @@
 package Tablica;
 
 
+import java.util.SimpleTimeZone;
 
 public class cw7 {
     public static void main(String[] args) {
         int[] tablica = {10,9,8,7,6,5,4,3,2,1};
 
-        for (int i = 9; i < 10 && i >=0; i--) {
-            tablica[i] = i+1;
-
-            if (i == 9) {
+        for (int i = 0; i < tablica.length; i++)
+        {
+            if (i == 0) {
                 System.out.print("[" + tablica[i]);
-            } else if (i == 0) {
+            } else if (i == 9) {
                 System.out.print("," + tablica[i] + "]");
             } else
                 System.out.print("," + tablica[i]);
         }
+        System.out.println();
+        System.out.println("Po petli");
         Sort(tablica);
+        }
 
-    }
+
+
 
         public static int[] Sort(int[] tab){
 
             int zmn;
-            for (int i =0;i< tab.length-1;i++) {
+            for (int i =0;i< tab.length;i++) {
                 for (int z = 0;z< tab.length-1-i; z++) {
                     if (tab[z] > tab[z + 1]) {
 
@@ -31,11 +35,18 @@ public class cw7 {
                         tab[z] = tab[z + 1];
                         tab[z + 1] = zmn;
 
+
+
                     }
 
-
                 }
-                System.out.print(tab[i]);
+                if (i == 0) {
+                    System.out.print("[" + tab[i]);
+                } else if (i == 9) {
+                    System.out.print("," + tab[i] + "]");
+                } else
+                    System.out.print("," + tab[i]);
+
 
             }
 
