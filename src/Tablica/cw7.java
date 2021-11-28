@@ -30,11 +30,12 @@ public class cw7 {
                         zmn = tab[z];
                         tab[z] = tab[z + 1];
                         tab[z + 1] = zmn;
-                        System.out.print(zmn);
+
                     }
 
 
                 }
+                System.out.print(tab[i]);
 
             }
 
